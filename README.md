@@ -1,0 +1,2 @@
+# auto_test_interface
+使用pytest+requests做接口自动化测试,测试企业微信接口
