@@ -3,6 +3,11 @@ corp_id:
   youlaiyouqu: 123456789
 secret:
   contacts: 1234567890
+request_timeout: 3
+proxy_status: 1
+proxies:
+  http: http://127.0.0.1:8888
+  https: http://127.0.0.1:8888
 #database_info:
 #  host: 192.168.50.1
 #  port: 3306

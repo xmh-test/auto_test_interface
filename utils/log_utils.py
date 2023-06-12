@@ -17,7 +17,7 @@ file_handler = logging.FileHandler(filename=f"{log_path}/api_object.log", encodi
 
 # 输出的formatter
 formatter = logging.Formatter(
-    '[%(asctime).19s] %(process)d:%(levelname).1s %(filename)s:%(lineno)d:%(funcName)s: %(message)s]')
+    '[%(asctime).19s] %(process)d:%(levelname).1s %(filename)s:%(lineno)d:%(funcName)s: %(message)s')
 
 # 日志格式与句柄的绑定
 file_handler.setFormatter(formatter)
@@ -32,4 +32,4 @@ logger.addHandler(file_handler)
 logger.addHandler(steam_handler)
 
 # 设置展示/写入文件的日志的级别
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)

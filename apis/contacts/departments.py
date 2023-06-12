@@ -3,6 +3,10 @@ from jsonpath import jsonpath
 
 
 class Departments(WeWork):
+    """
+    通讯录部门管理
+    """
+
     def create(self, data: dict):
         """
         创建部门
@@ -11,7 +15,7 @@ class Departments(WeWork):
         """
         req = {
             "method": "POST",
-            "url": f"{self.base_url}/department/create?access_token={self.access_token}",
+            "url": "/department/create",
             "json": data
         }
         return self.send_api(req)
@@ -24,7 +28,7 @@ class Departments(WeWork):
         """
         req = {
             "method": "POST",
-            "url": f"{self.base_url}/department/update?access_token={self.access_token}",
+            "url": "/department/update",
             "json": data
         }
         return self.send_api(req)
@@ -37,7 +41,8 @@ class Departments(WeWork):
         """
         req = {
             "method": "GET",
-            "url": f"{self.base_url}/department/delete?access_token={self.access_token}&id={depart_id}"
+            "url": f"/department/delete",
+            "params": {"id": depart_id}
         }
         return self.send_api(req)
 
@@ -48,7 +53,7 @@ class Departments(WeWork):
         """
         req = {
             "method": "GET",
-            "url": f"{self.base_url}/department/simplelist?access_token={self.access_token}"
+            "url": "/department/simplelist"
         }
         return self.send_api(req)
 
@@ -60,7 +65,8 @@ class Departments(WeWork):
         """
         req = {
             "method": "GET",
-            "url": self.base_url + f"/department/get?access_token={self.access_token}&id={depart_id}"
+            "url": f"/department/get",
+            "params": {"id": depart_id}
         }
         return self.send_api(req)
 
